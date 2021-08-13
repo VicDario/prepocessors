@@ -1,0 +1,28 @@
+$Fuente1: 'Lato', sans-serif;
+$Fuente2: 'Oswald', sans-serif;
+$color-primario: #333333;
+$color-claro: #FFFFFF;
+$color-secundario: #8841DA;
+$color-variacion: #3F579A;
+
+@mixin caja {
+    border-radius: 20px;
+    box-shadow: 0 20px 33px 0 rgba(0, 0, 0, 0.5);
+    background-color: $color-claro;
+    color: $color-primario;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: $Fuente1;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+}
