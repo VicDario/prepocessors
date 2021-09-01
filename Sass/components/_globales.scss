@@ -11,6 +11,21 @@ $color-variacion: #3F579A;
     background-color: $color-claro;
     color: $color-primario;
 }
+@mixin titulos ($fuente) {
+    @if $fuente == $Fuente1 {
+        font-family: $Fuente1;
+    } @else {
+        font-family: $Fuente2;
+        text-transform: uppercase;
+    }
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3:20px){
+    #{$header} {
+        font-size: $size;
+        margin: 0;
+    }
+}
 
 * {
 	box-sizing: border-box;

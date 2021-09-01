@@ -9,16 +9,16 @@
 		border-radius: 50em;
 	}
 	&__nombre {
-		text-transform: uppercase;
 		text-align: center;
 		font-size: 20px;
-		font-family: $Fuente2;
+		@include titulos($Fuente2);
 	}
 	&__titulo {
 		text-transform: uppercase;
 		text-align: center;
 		font-weight: 700;
 		font-size: 12px;
+		color: rgba($color-claro, 0.5);
 	}
 	&__boton {
 		display: block;
@@ -28,10 +28,11 @@
 		padding-top: 15px;
 		border-radius: 20px;
 		text-decoration: none;
-		text-transform: uppercase;
 		text-align: center;
-		font-family: $Fuente2;
 		color: $color-claro;
+		background-color: rgba($color-primario, 0.2);
+		border: 2px solid rgba($color-primario, 0.3);
+		@include titulos($Fuente2);
 	}
 }
 
