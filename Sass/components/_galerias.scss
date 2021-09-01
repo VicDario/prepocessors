@@ -1,13 +1,22 @@
 .galeria {
     width: 50%;
-    height: 250px;
-    margin: 10px auto;
-    padding: 20px 0 0 30px;
-    justify-content: space-evenly;
+    margin: 30px auto;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
     @include caja;
-    &__foo-principal {
-        float: left;
+    &__foto-principal {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 2;
         margin-right: 10px;
+    }
+    &__fotos-adicionales {
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 2;
+        display: flex;
+        flex-wrap: wrap;
     }
     &__fotos-adicionales img {
         height: 70px;
@@ -15,13 +24,15 @@
         margin-bottom: 5px;
     }
     h2 {
-        margin-bottom: 10%;
+        grid-column: 1 / span 4;
+        grid-row: 1;
+        text-align: left;
         font-weight: 600;
         font-size: 20px;
 		@include titulos($Fuente2);
     }
     img {
         border-radius: 10px;
-
+        vertical-align: top;
     }
 }
