@@ -1,9 +1,4 @@
-//ver diseno
-//explicar estructura completa
-//hacer header
-//hacer footer
-//hacer plantilla
-//pegar en todas las otras paginas
+@use "sass:math"; // Importar funciones matematicas
 
 //Variables
 $Fuente1: 'Lato', sans-serif;
@@ -30,7 +25,8 @@ $color-claro: #FFF;
 }
 
 @function calculateRem($size){
-	$remSize: $size / 16px;
+
+	$remSize: math.div($size, 16px);
 	@return $remSize * 1rem;
 }
 
